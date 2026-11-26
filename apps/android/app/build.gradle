@@ -7,7 +7,8 @@ plugins {
 def appEnv = [:]
 [
     rootProject.file(".env"),
-    rootProject.file(".env.local")
+    rootProject.file(".env.local"),
+    rootProject.file(".env.production")
 ].each { appEnvFile ->
     if (appEnvFile.exists()) {
         appEnvFile.eachLine { line ->
@@ -29,7 +30,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 def productionApiBaseUrl = System.getenv("API_BASE_URL") ?: appEnv["API_BASE_URL"] ?: "https://your-api.onrender.com/api/v1/"
-def developmentApiBaseUrl = System.getenv("API_BASE_URL") ?: appEnv["API_BASE_URL"] ?: "http://10.0.2.2:5000/api/v1/"
+def developmentApiBaseUrl = System.getenv("DEBUG_API_BASE_URL") ?: appEnv["DEBUG_API_BASE_URL"] ?: "http://10.0.2.2:5000/api/v1/"
 
 android {
     namespace 'com.notes.diaryapp'

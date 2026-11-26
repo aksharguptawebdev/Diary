@@ -50,8 +50,8 @@ export const envSchema = z
     CLOUDINARY_API_SECRET: z.string().trim().optional(),
 
     // Android Release Configuration
-    ANDROID_VERSION_NAME: z.string().trim().min(1).default("1.0.0"),
-    ANDROID_VERSION_CODE: z.coerce.number().int().positive().default(1),
+    ANDROID_VERSION_NAME: z.string().trim().min(1).default("1.0.1"),
+    ANDROID_VERSION_CODE: z.coerce.number().int().positive().default(2),
     ANDROID_MIN_VERSION_CODE: z.coerce.number().int().positive().default(1),
     ANDROID_APK_URL: z
       .string()
@@ -65,12 +65,12 @@ export const envSchema = z
       .url()
       .or(z.literal(""))
       .default(
-        "https://api.github.com/repos/gupta-akshar/Diary/releases/latest",
+        "https://api.github.com/repos/akshar-codes/Diary/releases/latest",
       )
       .transform(
         (val) =>
           val ||
-          "https://api.github.com/repos/gupta-akshar/Diary/releases/latest",
+          "https://api.github.com/repos/akshar-codes/Diary/releases/latest",
       ),
     ANDROID_RELEASE_NOTES: z
       .string()

@@ -19,7 +19,9 @@ services:
       - key: JWT_REFRESH_SECRET
         generateValue: true
       - key: CORS_ORIGINS
-        sync: false
+        value: https://usediary.vercel.app
+      - key: FRONTEND_URL
+        value: https://usediary.vercel.app
       - key: JWT_ACCESS_EXPIRES_IN
         value: 15m
       - key: JWT_REFRESH_EXPIRES_IN
@@ -33,9 +35,9 @@ services:
       - key: CLOUDINARY_API_SECRET
         sync: false
       - key: ANDROID_VERSION_NAME
-        value: "1.0.0"
+        value: "1.0.1"
       - key: ANDROID_VERSION_CODE
-        value: "1"
+        value: "2"
       - key: ANDROID_MIN_VERSION_CODE
         value: "1"
       - key: ANDROID_GITHUB_RELEASE_API
@@ -54,3 +56,7 @@ services:
         value: ""
       - key: WEB_RELEASE_DATE
         value: "2026-11-14T00:00:00.000Z"
+      - key: GOOGLE_CALLBACK_URL
+        value: "https://diary-lf01.onrender.com/api/v1/auth/google/callback"
+      - key: GITHUB_CALLBACK_URL
+        value: "https://diary-lf01.onrender.com/api/v1/auth/github/callback"
