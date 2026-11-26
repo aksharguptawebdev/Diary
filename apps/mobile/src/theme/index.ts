@@ -1,0 +1,40 @@
+export const colors = {
+  light: {
+    background: "#f8fafc",
+    surface: "#ffffff",
+    surfaceSecondary: "#f1f5f9",
+    border: "#e2e8f0",
+    borderLight: "#f1f5f9",
+    text: "#0f172a",
+    textSecondary: "#64748b",
+    textMuted: "#94a3b8",
+    primary: "#0f172a",
+    primaryText: "#ffffff",
+    accent: "#f59e0b",
+    danger: "#ef4444",
+    success: "#10b981",
+  },
+  dark: {
+    background: "#09090b",
+    surface: "#18181b",
+    surfaceSecondary: "#27272a",
+    border: "#27272a",
+    borderLight: "#18181b",
+    text: "#f8fafc",
+    textSecondary: "#a1a1aa",
+    textMuted: "#71717a",
+    primary: "#f8fafc",
+    primaryText: "#09090b",
+    accent: "#f59e0b",
+    danger: "#ef4444",
+    success: "#10b981",
+  },
+};
+
+export const spacing = {
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+};
