@@ -11,9 +11,8 @@
     "moduleResolution": "bundler",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"]

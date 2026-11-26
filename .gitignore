@@ -21,4 +21,5 @@ build/
 local.properties
 /apps/mobile/android/
 /apps/mobile/ios/
+/apps/android/app/release/
 .vscode
