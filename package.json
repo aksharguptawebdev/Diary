@@ -5,6 +5,9 @@
   "scripts": {
     "dev:server": "pnpm --filter @notes/server dev",
     "dev:web": "pnpm --filter @notes/web dev",
+    "dev:mobile": "pnpm --filter @notes/mobile start",
+    "dev:mobile:android": "pnpm --filter @notes/mobile android",
+    "prebuild:mobile:android": "pnpm --filter @notes/mobile exec expo prebuild --platform android",
     "build:shared": "pnpm --filter @notes/shared build",
     "build:server": "pnpm --filter @notes/server build",
     "build:web": "pnpm build:shared && pnpm --filter @notes/web build",
